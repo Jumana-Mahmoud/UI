@@ -1,6 +1,4 @@
-import 'package:ecommerce_ui/login/screens/login_screen.dart';
-import 'package:ecommerce_ui/sign_up/screens/sign_up_screen.dart';
-import 'package:ecommerce_ui/verification/screens/verification_screen.dart';
+import 'package:ecommerce_ui/splash_screen/widgets/screen_body.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +12,7 @@ class ECommereceUi extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Ui Demo',
-      home: SignUpScreen(),
+      home: SplashScreenBody(),
     );
   }
 }

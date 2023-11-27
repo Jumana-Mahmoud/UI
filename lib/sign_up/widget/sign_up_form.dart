@@ -3,48 +3,49 @@ import 'package:flutter/material.dart';
 import '../../core/widgets/form_field.dart';
 import '../../core/widgets/styled_text.dart';
 import '../../core/widgets/submit_button.dart';
+import '../../login/screens/login_screen.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Form(
+    return  Form(
         child: Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        FormElement(
+        const FormElement(
           label: 'Name',
           hintText: 'Enter your name',
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        FormElement(
+        const FormElement(
           label: 'Email',
           hintText: 'Enter your email',
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        FormElement(
+        const FormElement(
           label: 'Password',
           hintText: 'Enter your password',
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        SubmitButton(
+        const SubmitButton(
           buttonText: 'Sign up ',
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         StyledText(
           question: 'Already have an account? ',
-          action: 'Sign in',
+          action: 'Sign in',screen: const LoginScreen()
         ),
       ],
     ));

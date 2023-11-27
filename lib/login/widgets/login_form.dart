@@ -5,6 +5,7 @@ import '../../core/widgets/form_field.dart';
 import '../../core/widgets/styled_text.dart';
 import '../../core/widgets/submit_button.dart';
 import '../../core/widgets/text.dart';
+import '../../sign_up/screens/sign_up_screen.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -42,9 +43,9 @@ class LoginForm extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const StyledText(
+         StyledText(
           question: 'Don\'t have an account? ',
-          action: 'Sign Up',
+          action: 'Sign Up', screen: SignUpScreen(),
         ),
       ],
     ));

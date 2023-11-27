@@ -13,25 +13,25 @@ class VerificationBody extends StatelessWidget {
     return Container(
         margin: const EdgeInsets.only(top: 100),
         padding: const EdgeInsets.all(20),
-        child: const Column(
+        child:  Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleWidget(
+              const TitleWidget(
                 title: 'Verification',
               ),
-              Text(
+              const Text(
                 'enter the OTP code sent to you by SMS',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              CodeField(),
+              const CodeField(),
               StyledText(
                 question: 'Didn\'t get a code? ',
                 action: 'Send again',
               ),
-              Spacer(),
-              SubmitButton(
+              const Spacer(),
+              const SubmitButton(
                 buttonText: 'Verify ',
               ),
             ]));

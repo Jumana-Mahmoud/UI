@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class StyledText extends StatelessWidget {
-  const StyledText({super.key, required this.question, required this.action});
+   StyledText({super.key, required this.question, required this.action,  this.screen});
 
   final String question;
   final String action;
+  final Widget? screen;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +24,19 @@ class StyledText extends StatelessWidget {
               fontSize: 14,
               color: Colors.deepPurpleAccent,
             ),
-          //   recognizer: TapGestureRecognizer()
-          // ..onTap = ,
+             recognizer:TapGestureRecognizer()
+                ..onTap = () {
+                   if (screen != null) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => screen!),
+                    );
+                  }
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => screen),
+                  // );
+                },
 
     ),
 
